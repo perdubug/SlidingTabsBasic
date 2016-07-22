@@ -49,7 +49,7 @@ public class SlidingTabsFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_sample, container, false);
+        return inflater.inflate(R.layout.rich_search_tabs, container, false);
     }
 
     // BEGIN_INCLUDE (fragment_onviewcreated)
@@ -87,12 +87,14 @@ public class SlidingTabsFragment extends Fragment {
      */
     class SamplePagerAdapter extends PagerAdapter {
 
+        private final int MAX_TAB_NUMS = 4; //Web,Contact,Apps,History
+
         /**
          * @return the number of pages to display
          */
         @Override
         public int getCount() {
-            return 10;
+            return MAX_TAB_NUMS;
         }
 
         /**
@@ -114,7 +116,7 @@ public class SlidingTabsFragment extends Fragment {
          */
         @Override
         public CharSequence getPageTitle(int position) {
-            return "Item " + (position + 1);
+            return "Item> " + (position + 1);
         }
         // END_INCLUDE (pageradapter_getpagetitle)
 

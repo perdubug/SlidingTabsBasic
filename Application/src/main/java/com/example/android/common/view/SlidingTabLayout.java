@@ -30,8 +30,7 @@ import android.widget.HorizontalScrollView;
 import android.widget.TextView;
 
 /**
- * To be used with ViewPager to provide a tab indicator component which give constant feedback as to
- * the user's scroll progress.
+ * To be used with ViewPager to provide a tab indicator component which support scrolling.
  * <p>
  * To use the component, simply add it to your view hierarchy. Then in your
  * {@link android.app.Activity} or {@link android.support.v4.app.Fragment} call
@@ -92,6 +91,7 @@ public class SlidingTabLayout extends HorizontalScrollView {
 
         // Disable the Scroll Bar
         setHorizontalScrollBarEnabled(false);
+
         // Make sure that the Tab Strips fills this View
         setFillViewport(true);
 
