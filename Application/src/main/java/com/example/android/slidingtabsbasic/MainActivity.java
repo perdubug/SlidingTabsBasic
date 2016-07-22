@@ -18,15 +18,8 @@
 package com.example.android.slidingtabsbasic;
 
 import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentTransaction;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.widget.ViewAnimator;
-
-import com.example.android.common.activities.SampleActivityBase;
-import com.example.android.common.logger.Log;
-import com.example.android.common.logger.LogWrapper;
-import com.example.android.common.logger.MessageOnlyLogFilter;
 
 /**
  * A simple launcher activity containing a summary sample description, sample log and a custom
@@ -35,9 +28,7 @@ import com.example.android.common.logger.MessageOnlyLogFilter;
  * For devices with displays with a width of 720dp or greater, the sample log is always visible,
  * on other devices it's visibility is controlled by an item on the Action Bar.
  */
-public class MainActivity extends SampleActivityBase {
-
-    public static final String TAG = "MainActivity";
+public class MainActivity extends FragmentActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,7 +37,7 @@ public class MainActivity extends SampleActivityBase {
 
         if (savedInstanceState == null) {
             FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-            SlidingTabsBasicFragment fragment = new SlidingTabsBasicFragment();
+            SlidingTabsFragment fragment = new SlidingTabsFragment();
             transaction.replace(R.id.sample_content_fragment, fragment);
             transaction.commit();
         }

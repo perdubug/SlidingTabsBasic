@@ -19,16 +19,20 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <TextView
-        style="@style/Widget.SampleMessage"
+    <EditText
+        android:id="@+id/bw_as_edit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingBottom="@dimen/vertical_page_margin"
-        android:paddingLeft="@dimen/horizontal_page_margin"
-        android:paddingRight="@dimen/horizontal_page_margin"
-        android:paddingTop="@dimen/vertical_page_margin"
-        android:text="@string/intro_message" />
-
+        android:layout_marginBottom="2dp"
+        android:background="@null"
+        android:imeOptions="actionSearch"
+        android:inputType="text"
+        android:lines="1"
+        android:minWidth="2000dp"
+        android:nextFocusLeft="@id/bw_as_edit"
+        android:nextFocusUp="@id/bw_as_edit"
+        android:selectAllOnFocus="true"
+        android:textSize="16sp" />
 
     <View
         android:layout_width="match_parent"

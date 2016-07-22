@@ -16,7 +16,6 @@
 
 package com.example.android.slidingtabsbasic;
 
-import com.example.android.common.logger.Log;
 import com.example.android.common.view.SlidingTabLayout;
 
 import android.os.Bundle;
@@ -28,14 +27,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-/**
- * A basic sample which shows how to use {@link com.example.android.common.view.SlidingTabLayout}
- * to display a custom {@link ViewPager} title strip which gives continuous feedback to the user
- * when scrolling.
- */
-public class SlidingTabsBasicFragment extends Fragment {
+public class SlidingTabsFragment extends Fragment {
 
-    static final String LOG_TAG = "SlidingTabsBasicFragment";
+    static final String TAG = "SlidingTabsFragment";
 
     /**
      * A custom {@link ViewPager} title strip which looks much like Tabs present in Android v4.0 and
@@ -140,8 +134,6 @@ public class SlidingTabsBasicFragment extends Fragment {
             TextView title = (TextView) view.findViewById(R.id.item_title);
             title.setText(String.valueOf(position + 1));
 
-            Log.i(LOG_TAG, "instantiateItem() [position: " + position + "]");
-
             // Return the View
             return view;
         }
@@ -153,7 +145,6 @@ public class SlidingTabsBasicFragment extends Fragment {
         @Override
         public void destroyItem(ViewGroup container, int position, Object object) {
             container.removeView((View) object);
-            Log.i(LOG_TAG, "destroyItem() [position: " + position + "]");
         }
 
     }
