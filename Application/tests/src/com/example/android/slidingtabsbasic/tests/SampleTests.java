@@ -25,7 +25,7 @@ import android.test.ActivityInstrumentationTestCase2;
 public class SampleTests extends ActivityInstrumentationTestCase2<MainActivity> {
 
     private MainActivity mTestActivity;
-    private SlidingTabsBasicFragment mTestFragment;
+
 
     public SampleTests() {
         super(MainActivity.class);
@@ -40,8 +40,7 @@ public class SampleTests extends ActivityInstrumentationTestCase2<MainActivity> 
         // flags = {@link Intent#FLAG_ACTIVITY_NEW_TASK}
         // All other fields are null or empty.
         mTestActivity = getActivity();
-        mTestFragment = (SlidingTabsBasicFragment)
-            mTestActivity.getSupportFragmentManager().getFragments().get(1);
+
     }
 
     /**
@@ -51,7 +50,7 @@ public class SampleTests extends ActivityInstrumentationTestCase2<MainActivity> 
         //Try to add a message to add context to your assertions. These messages will be shown if
         //a tests fails and make it easy to understand why a test failed
         assertNotNull("mTestActivity is null", mTestActivity);
-        assertNotNull("mTestFragment is null", mTestFragment);
+
     }
 
     /**
